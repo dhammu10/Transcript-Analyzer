@@ -1,0 +1,8 @@
+Transcript,Summary,Sentiment
+"My internet connection keeps dropping, and I’m unable to work properly.","The customer's internet connection is dropping, causing issues with their work. They are experiencing frustration due to the disruption. The customer needs a solution to resolve the issue.",Negative
+"My internet connection keeps dropping, and I’m unable to work properly.","The customer's internet connection is dropping, preventing them from working properly",Negative
+"“I placed an order last week, but I still haven’t received any confirmation email.”
+",The customer placed an order last week but hasn't received a confirmation email yet.,Negative
+"“Hi, I was trying to book a slot yesterday but the payment failed…” ","The customer attempted to book a slot yesterday, but their payment failed. They are reaching out for assistance with the issue. The customer is seeking help to resolve the payment failure.",Negative
+"“The support team resolved my issue quickly, and I’m very satisfied with the service.”",The customer's issue was resolved quickly by the support team and they are satisfied with the service.,Positive
+“I updated my account details yesterday and just wanted to confirm if the changes were saved.”,The customer updated their account details and is confirming if the changes were saved.,Neutral
