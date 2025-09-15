@@ -87,18 +87,7 @@ Transcript,Summary,Sentiment
 ```
 
 ---
-
-## 🎥 Demo Video
-
-You can record a Loom/Zoom/Meet walkthrough of:
-
-* Entering a transcript
-* Analyzing the results
-* Opening the saved CSV
-
-(Link here after recording)
-
----
+ 
 
 ## 🤝 Contributing
 
