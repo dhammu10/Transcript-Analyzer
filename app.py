@@ -3,9 +3,10 @@ import requests
 import pandas as pd
 import os
 import json
+import re
 
-API_URL = "URL - here"   
-API_KEY = "your_api_key_here"
+API_URL = "API_URL"   
+API_KEY = "API_KEY"
 
 # Call API
 def analyze_transcript(transcript):
@@ -35,7 +36,8 @@ def analyze_transcript(transcript):
 
     output = result["choices"][0]["message"]["content"]
 
-    clean_output = output.strip("`").strip()
+    clean_output = re.sub(r"^```(json)?", "", output.strip(), flags=re.IGNORECASE)
+    clean_output = re.sub(r"```$", "", clean_output.strip())
 
 
     try:
@@ -99,7 +101,7 @@ if os.path.exists("call_analysis.csv"):
 if os.path.exists("call_analysis.csv"):
         if st.sidebar.button("Open CSV", key="open_csv_button", use_container_width=True):
             df = pd.read_csv("call_analysis.csv")
-            st.subheader("📋 CSV File Contents")
+            st.subheader("CSV File Contents")
             st.dataframe(df, use_container_width=True)
 
  
