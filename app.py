@@ -82,4 +82,24 @@ if analyze_clicked:
     else:
         st.warning("Please enter a transcript first!")
 
+col1, col2, col3 = st.sidebar.columns([1, 2, 1])
+with col2:
+    st.subheader("📁 CSV Options")
+
+if os.path.exists("call_analysis.csv"):
+    with open("call_analysis.csv", "rb") as file:
+        st.sidebar.download_button(
+            label="Download CSV",
+            data=file,
+            file_name="call_analysis.csv",
+            mime="text/csv",
+            use_container_width=True
+            )
+
+if os.path.exists("call_analysis.csv"):
+        if st.sidebar.button("Open CSV", key="open_csv_button", use_container_width=True):
+            df = pd.read_csv("call_analysis.csv")
+            st.subheader("📋 CSV File Contents")
+            st.dataframe(df, use_container_width=True)
+
  
