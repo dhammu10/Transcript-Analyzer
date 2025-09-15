@@ -43,7 +43,7 @@ def analyze_transcript(transcript):
         summary = parsed.get("summary", "N/A")
         sentiment = parsed.get("sentiment", "N/A")
     except Exception as e:
-        summary, sentiment = output, "N/A"  # fallback if parsing fails
+        summary, sentiment = output, "N/A"  
 
     return summary, sentiment
 
